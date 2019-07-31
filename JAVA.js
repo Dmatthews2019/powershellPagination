@@ -8,7 +8,7 @@ const firstVisibleRow = () => (page * rowsPerPage) + 1;
 const lastVisibleRow = () => (page * rowsPerPage) + rowsPerPage + 1;
 let rowsPerPage = 20;
 // subtract 1 from length of rows as the first row is the headers
-const pages = () => ((rows.length - 1) / rowsPerPage) - 1;
+const pages = () => ((searchresults.length - 1) / rowsPerPage) - 1;
 function setPage(pagenum) {
     console.log(pagenum)
     page = pagenum;
@@ -38,13 +38,32 @@ function LastPage() {
 }
 function showPage() {
     for (var i = 1; i < rows.length; i++) {
+        rows[i].style.display = "none";
+
+    }
+    for (var i = 1; i < searchresults.length; i++) {
 
         if (i >= firstVisibleRow() && i <= lastVisibleRow()) {
-            rows[i].style.display = "table-row";
+            searchresults[i].style.display = "table-row";
 
         } else {
-            rows[i].style.display = "none";
+            searchresults[i].style.display = "none";
         }
     }
 }
-showPage();// JavaScript source code
+// JavaScript source code
+var searchresults = [];
+
+function search() {
+    searchresults = [];
+    searchresults.push(rows[0])
+    var Parameter = document.getElementById("search").value
+    for (var i = 1; i < rows.length; i++) {
+        
+        if (rows[i].innerHTML.toLowerCase().indexOf((""+Parameter).toLowerCase()) != -1) {
+            searchresults.push(rows[i]) ;
+        }
+    }
+    showPage()
+}
+search();
