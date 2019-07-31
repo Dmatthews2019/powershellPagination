@@ -1,6 +1,11 @@
 cls
 $dataSet = get-command | select name,commandtype,source | 
-    ConvertTo-html -cssuri css.css -PreContent "<div id='log'>" -PostContent "
+    ConvertTo-html -title "Pagination" -cssuri css.css -PreContent "
+    
+    <div id='log'> 
+    <input id='search' onKeyUp='search()'/>
+    
+    " -PostContent "
     <table id='buttonTable'>
         <tr>
             <td><button onclick='FirstPage();'>First</button></td>
