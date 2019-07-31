@@ -1,6 +1,6 @@
 cls
 $dataSet = get-command | select name,commandtype,source | 
-    ConvertTo-html -title "Pagination" -cssuri css.css -PreContent "
+    ConvertTo-html -title "get-Command" -cssuri css.css -PreContent "
     
     <div id='log'> 
     <input id='search' onKeyUp='search()'/>
