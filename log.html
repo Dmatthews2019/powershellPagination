@@ -1,10 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>HTML TABLE</title>
+<title>Pagination</title>
 <link rel="stylesheet" type="text/css" href="css.css" />
 </head><body>
-<div id='log'>
+
+    
+    <div id='log'> 
+    <input id='search' onKeyUp='search()'/>
+    
+    
 <table>
 <colgroup><col/><col/><col/></colgroup>
 <tr><th>Name</th><th>CommandType</th><th>Source</th></tr>
@@ -469,6 +474,7 @@
 <tr><td>M:</td><td>Function</td><td></td></tr>
 <tr><td>mkdir</td><td>Function</td><td></td></tr>
 <tr><td>Mock</td><td>Function</td><td>Pester</td></tr>
+<tr><td>more</td><td>Function</td><td></td></tr>
 <tr><td>Mount-DiskImage</td><td>Function</td><td>Storage</td></tr>
 <tr><td>Move-SmbWitnessClient</td><td>Function</td><td>SmbWitness</td></tr>
 <tr><td>N:</td><td>Function</td><td></td></tr>
@@ -536,7 +542,6 @@
 <tr><td>Pause</td><td>Function</td><td></td></tr>
 <tr><td>prompt</td><td>Function</td><td></td></tr>
 <tr><td>PSConsoleHostReadline</td><td>Function</td><td>PSReadline</td></tr>
-<tr><td>psEdit</td><td>Function</td><td></td></tr>
 <tr><td>Publish-Module</td><td>Function</td><td>PowerShellGet</td></tr>
 <tr><td>Publish-Script</td><td>Function</td><td>PowerShellGet</td></tr>
 <tr><td>Q:</td><td>Function</td><td></td></tr>
@@ -878,7 +883,6 @@
 <tr><td>X:</td><td>Function</td><td></td></tr>
 <tr><td>Y:</td><td>Function</td><td></td></tr>
 <tr><td>Z:</td><td>Function</td><td></td></tr>
-<tr><td>more</td><td>Filter</td><td></td></tr>
 <tr><td>Add-AppxPackage</td><td>Cmdlet</td><td>Appx</td></tr>
 <tr><td>Add-AppxProvisionedPackage</td><td>Cmdlet</td><td>Dism</td></tr>
 <tr><td>Add-AppxVolume</td><td>Cmdlet</td><td>Appx</td></tr>
@@ -904,7 +908,7 @@
 <tr><td>Clear-Item</td><td>Cmdlet</td><td>Microsoft.PowerShell.Management</td></tr>
 <tr><td>Clear-ItemProperty</td><td>Cmdlet</td><td>Microsoft.PowerShell.Management</td></tr>
 <tr><td>Clear-KdsCache</td><td>Cmdlet</td><td>Kds</td></tr>
-<tr><td>Clear-RecycleBin</td><td>Cmdlet</td><td>Microsoft.PowerShell.Management</td></tr>
+<tr><td>Clear-Recyclebin</td><td>Cmdlet</td><td>Microsoft.PowerShell.Management</td></tr>
 <tr><td>Clear-Tpm</td><td>Cmdlet</td><td>TrustedPlatformModule</td></tr>
 <tr><td>Clear-Variable</td><td>Cmdlet</td><td>Microsoft.PowerShell.Utility</td></tr>
 <tr><td>Clear-WindowsCorruptMountPoint</td><td>Cmdlet</td><td>Dism</td></tr>
